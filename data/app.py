@@ -4,7 +4,7 @@ import requests
 import pandas as pd
 
 # Load the datasets
-movies_data = pd.read_csv('top10K-TMDB-movies.csv')
+movies_data = pd.read_csv('top10K-TMDB-moviess.csv')
 tv_shows_data = pd.read_csv('tv_shows.csv') 
 
 def fetch_movie_poster(movie_id):
