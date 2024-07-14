@@ -4,8 +4,8 @@ import requests
 import pandas as pd
 
 # Load the datasets
-movies_data = pd.read_csv(r'C:\Users\hp\OneDrive\Desktop\movie recomendation\top10K-TMDB-movies.csv')
-tv_shows_data = pd.read_csv(r'C:\Users\hp\OneDrive\Desktop\movie recomendation\tv_shows.csv')  
+movies_data = pd.read_csv('top10K-TMDB-movies.csv')
+tv_shows_data = pd.read_csv('tv_shows.csv') 
 
 def fetch_movie_poster(movie_id):
     url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key=29e2f3345677d97e093a706548e7a736&language=en-US"
