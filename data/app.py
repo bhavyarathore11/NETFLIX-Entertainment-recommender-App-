@@ -5,7 +5,7 @@ import pandas as pd
 
 # Load the datasets
 movies_data = pd.read_csv('top10K-TMDB-moviess.csv')
-tv_shows_data = pd.read_csv('tv_shows.csv') 
+tv_shows_data = pd.read_csv('tv_shows.csv')  
 
 def fetch_movie_poster(movie_id):
     url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key=29e2f3345677d97e093a706548e7a736&language=en-US"
@@ -72,8 +72,8 @@ def recommend(content, content_type='movie'):
     return recommended_names, recommended_posters, recommended_links
 
 # Load the content and similarity matrices
-movies_similarity = pickle.load(open(r'C:\Users\hp\OneDrive\Desktop\movie recomendation\similarity.pkl', 'rb'))
-tv_shows_similarity = pickle.load(open(r'C:\Users\hp\OneDrive\Desktop\movie recomendation\tv_shows_similarity.pkl', 'rb'))
+movies_similarity = pickle.load(open('similarity.pkl', 'rb'))
+tv_shows_similarity = pickle.load(open('tv_shows_similarity.pkl', 'rb'))
 
 # Initialize session state
 if 'page' not in st.session_state:
